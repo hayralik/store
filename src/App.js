@@ -1,4 +1,4 @@
-import ProductList from './store/productlist';
+import ProductList from './components/store/productlist';
 
 function App() {
   return (
