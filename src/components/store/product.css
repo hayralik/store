@@ -1,0 +1,21 @@
+.product-card {
+  border: 4px solid #33cc33;     /* зелёная рамка вокруг каждого товара */
+  margin: 10px;
+  padding: 15px;
+  background-color: #ffff99;     /* светло-жёлтый фон внутри карточки */
+  
+  /* чтобы содержимое было видно */
+  font-family: Arial, sans-serif;
+}
+
+.product-card h3 {
+  color: #3366cc;                /* синие заголовки */
+  margin-top: 0;
+}
+
+.product-card button {
+  background-color: #ffaa00;      /* оранжевая кнопка */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
