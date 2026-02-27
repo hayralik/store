@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const basename = process.env.NODE_ENV === 'production' ? '/store' : '';
+const basename = process.env.PUBLIC_URL || '';
+//console.log(basename);
 root.render(
   <React.StrictMode>
     <BrowserRouter basename={basename}>
