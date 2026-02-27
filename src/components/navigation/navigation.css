@@ -1,0 +1,27 @@
+.nav {
+  padding: 20px;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav a:hover {
+  background-color: #ddd;
+}
+
+/* активная ссылка (будем использовать позже) */
+.nav a.active {
+  background-color: #007bff;
+  color: white;
+}

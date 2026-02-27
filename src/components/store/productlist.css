@@ -1,12 +1,12 @@
 .product-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
+  gap: 10px;
   
   background-color: #e6f3ff;    /* светло-голубой фон для всей сетки */
-  padding: 0px;
+  padding: 10px;
   border: 5px solid #ff6666;     /* ярко-красная рамка */
-  margin: 30px;
+  margin: 20px;
   
   /* добавим фон для самой рамки? нет, но можем выделить */
 }
