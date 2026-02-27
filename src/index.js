@@ -6,9 +6,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const basename = process.env.NODE_ENV === 'production' ? '/store' : '';
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/store">
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
