@@ -1,30 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
-import ProductList from './components/store/productlist';
 import Navigation from './components/navigation/navigation';
+import { routes } from './config/routes';
+
+const renderRoute = (route) => (
+  <Route key={route.path} path={route.path} element={route.element} />
+);
 
 function App() {
   return (
     <div>
       <Navigation />
-      
       <Routes>
-        <Route path="/" element={
-          <>
-            <h1>Главная страница</h1>
-            <p>Добро пожаловать в магазин</p>
-          </>
-        } />
-        
-        <Route path="/catalog" element={
-          <>
-            <h1>Каталог товаров</h1>
-            <ProductList />
-          </>
-        } />
-        
-        <Route path="/cart" element={
-          <h1>Корзина (пусто)</h1>
-        } />
+        {routes.map(renderRoute)}
       </Routes>
     </div>
   );
