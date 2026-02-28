@@ -7,6 +7,7 @@ export default function Navigation() {
       <Link to="/">Главная</Link>
       <Link to="/catalog">Каталог</Link>
       <Link to="/cart">Корзина</Link>
+      <Link to="/about">О нас</Link>
     </nav>
   );
 }

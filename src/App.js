@@ -11,6 +11,8 @@ function App() {
         <Route path="/" element={<h1>Главная страница</h1>} />
         <Route path="/catalog" element={<ProductList />} />
         <Route path="/cart" element={<h1>Корзина (пусто)</h1>} />
+        <Route path="/about" element={<h1>А вы знаете, почему нас не перебодали?<br />
+        Потому что мы - банда!</h1>} />
         <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
     </div>
