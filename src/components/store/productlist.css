@@ -10,3 +10,14 @@
   
   /* добавим фон для самой рамки? нет, но можем выделить */
 }
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.product-link:hover {
+  transform: scale(1.02);
+}

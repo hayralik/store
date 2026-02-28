@@ -1,6 +1,17 @@
-import { Link } from 'react-router-dom';  // импорт
+import { Link } from 'react-router-dom';
 import Product from './product';
 import './productlist.css';
+
+// Выносим функцию рендера
+const renderProduct = (product) => (
+  <Link 
+    key={product.id} 
+    to={`/product/${product.id}`}
+    className="product-link"
+  >
+    <Product name={product.name} price={product.price} />
+  </Link>
+);
 
 export default function ProductList() {
   const products = [
@@ -12,18 +23,7 @@ export default function ProductList() {
 
   return (
     <div className="product-list">
-      {products.map(product => (
-        <Link 
-          key={product.id} 
-          to={`/product/${product.id}`}
-          style={{ textDecoration: 'none', color: 'inherit' }}
-        >
-          <Product 
-            name={product.name} 
-            price={product.price} 
-          />
-        </Link>
-      ))}
+      {products.map(renderProduct)}
     </div>
   );
 }
