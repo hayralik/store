@@ -1,12 +1,22 @@
+import { useContext } from 'react';
+import { CartContext } from '../../context/cartcontext';
 import './product.css';
 
-function Product(props) {
+export default function Product({ id, name, price }) {
+  const { addToCart } = useContext(CartContext);
+
   return (
-    <div className="product-card">   {/* ← вместо style */}
-      <h3>{props.name}</h3>
-      <p>Цена: {props.price} ₽</p>
-      <button>В корзину</button>
+    <div className="product-card">
+      <h3>{name}</h3>
+      <p>Цена: {price} ₽</p>
+      <button onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Добавляем:', { id, name, price });
+        addToCart({ id, name, price });
+      }}>
+        В корзину
+      </button>
     </div>
   );
 }
-export default Product;

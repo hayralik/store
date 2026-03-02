@@ -4,12 +4,8 @@ import './productlist.css';
 
 // Выносим функцию рендера
 const renderProduct = (product) => (
-  <Link 
-    key={product.id} 
-    to={`/product/${product.id}`}
-    className="product-link"
-  >
-    <Product name={product.name} price={product.price} />
+  <Link key={product.id} to={`/product/${product.id}`} className="product-link">
+    <Product id={product.id} name={product.name} price={product.price} />
   </Link>
 );
 

@@ -1,4 +1,6 @@
 import { useParams } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../../context/cartcontext';
 
 // Временные данные (потом вынесем)
 const products = [
@@ -11,6 +13,7 @@ const products = [
 
 export default function ProductPage() {
   const { id } = useParams();  // получаем id из URL
+  const { addToCart } = useContext(CartContext);
   const product = products.find(p => p.id === Number(id));
 
   if (!product) {
@@ -22,7 +25,12 @@ export default function ProductPage() {
       <h1>{product.name}</h1>
       <p>Цена: {product.price} ₽</p>
       <p>Описание: {product.description}</p>
-      <button>В корзину</button>
+      <button onClick={(e) => {
+        console.log('Добавляем:', product);
+        addToCart({ id: product.id, name: product.name, price: product.price });
+      }}>
+        В корзину
+      </button>
     </div>
   );
 }

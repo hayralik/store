@@ -7,12 +7,14 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const basename = "/store";
+import { CartProvider } from './context/cartcontext';
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={basename}>
-      <App />
+    <BrowserRouter basename="/store">
+      <CartProvider>
+        <App />
+      </CartProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
