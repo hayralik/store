@@ -3,11 +3,14 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   
-  background-color: #e6f3ff;    /* светло-голубой фон для всей сетки */
+  background-color: #e6f3ff;
   padding: 10px;
-  border: 5px solid #ff6666;     /* ярко-красная рамка */
+  border: 5px solid blanchedalmond;
   margin: 20px;
-  
+  max-width: 100%;        /* не выходить за экран */
+  overflow-x: hidden;     /* скрыть лишнее */
+  box-sizing: border-box; /* padding внутри ширины */
+
   /* добавим фон для самой рамки? нет, но можем выделить */
 }
 

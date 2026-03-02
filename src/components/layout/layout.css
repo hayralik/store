@@ -1,0 +1,43 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header, .footer {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sidebar-left, .sidebar-right {
+  width: 200px;
+  background: #f0f0f0;
+  padding: 0px;
+}
+
+.content {
+  flex: 1;
+}
+
+/* мобильная версия */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .sidebar-left, .sidebar-right {
+    width: 100%;
+  }
+}
