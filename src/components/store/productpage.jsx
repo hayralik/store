@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../context/cartcontext';
+import './productpage.css';
 
 // Временные данные (потом вынесем)
 const products = [
@@ -21,7 +22,7 @@ export default function ProductPage() {
   }
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div className='product-page'>
       <h1>{product.name}</h1>
       <p>Цена: {product.price} ₽</p>
       <p>Описание: {product.description}</p>

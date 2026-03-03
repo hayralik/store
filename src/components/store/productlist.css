@@ -4,9 +4,9 @@
   gap: 10px;
   
   background-color: #e6f3ff;
-  padding: 10px;
-  border: 5px solid blanchedalmond;
-  margin: 20px;
+  padding: 0px;
+  border: 2px solid blue;
+  margin: 0px;
   max-width: 100%;        /* не выходить за экран */
   overflow-x: hidden;     /* скрыть лишнее */
   box-sizing: border-box; /* padding внутри ширины */
