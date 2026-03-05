@@ -4,6 +4,7 @@ import ProductPage from './components/store/productpage';
 import CartPage from './components/store/cartpage';
 import Layout from './components/layout/layout';
 
+/* просто для того, чтобы изменить что-то в файле!*/
 function App() {
   return (
     <div>
