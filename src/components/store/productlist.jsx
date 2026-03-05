@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Product from './product';
 import './productlist.css';
+import { useState, useEffect } from 'react';
 
 // Выносим функцию рендера
 const renderProduct = (product) => (
@@ -10,14 +11,16 @@ const renderProduct = (product) => (
 );
 
 export default function ProductList() {
-  const products = [
-    { id: 1, name: "Ноутбук", price: 75000 },
-    { id: 2, name: "Мышь", price: 1500 },
-    { id: 3, name: "Клавиатура", price: 3500 },
-    { id: 4, name: "Монитор", price: 18000 },
-    { id: 5, name: "Жесткий диск", price: 2000 }
-  ];
+  const [products, setProducts] = useState([]);
 
+  useEffect(() => {
+    fetch('http://localhost:5000/api/products')
+      .then(res => res.json())
+      .then(data => setProducts(data))
+      .catch(err => console.error('Ошибка:', err));
+  }, []);
+
+  console.log('products from server:', products);
   return (
     <div className="product-list">
       {products.map(renderProduct)}
