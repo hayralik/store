@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Product from './product';
 import './productlist.css';
 import { useState, useEffect } from 'react';
+import AddProductForm from './AddProductForm';
 
 // Выносим функцию рендера
 const renderProduct = (product) => (
@@ -13,17 +14,28 @@ const renderProduct = (product) => (
 export default function ProductList() {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
+  const loadProducts = () => {
     fetch('http://localhost:5000/api/products')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error('Ошибка:', err));
-  }, []);
+  };
+  useEffect(loadProducts, []);
 
   console.log('products from server:', products);
+
   return (
-    <div className="product-list">
-      {products.map(renderProduct)}
+    <div>
+      <AddProductForm onProductAdded={loadProducts} />
+      <div className="product-list">
+        {products.map(renderProduct)}
+      </div>
     </div>
   );
+
+  //  return (
+  //    <div className="product-list">
+  //      {products.map(renderProduct)}
+  //    </div>
+  //  );
 }
