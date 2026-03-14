@@ -1,5 +1,6 @@
 import Navigation from '../navigation/navigation';
 import './layout.css';
+import RegisterForm from '../store/RegisterForm';
 
 export default function Layout({ children }) {
   return (
@@ -12,7 +13,11 @@ export default function Layout({ children }) {
 
       <div className="main-container">
         <aside className="sidebar-left">
-          Левая колонка (фильтры, категории)
+          <RegisterForm onRegisterSuccess={() => {
+            // Что сделать после успешной регистрации
+            // Например, перенаправить на страницу входа
+            console.log('Регистрация успешна!');
+          }} />
         </aside>
 
         <main className="content">
