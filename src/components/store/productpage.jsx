@@ -9,7 +9,7 @@ export default function ProductPage() {
   const [product, setProduct] = useState(null);  // внутри компонента
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/${id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/products/${id}`)
       .then(res => res.json())
       .then(data => setProduct(data))
       .catch(err => console.error('Ошибка:', err));
