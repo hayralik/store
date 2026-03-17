@@ -9,6 +9,7 @@ export default function ProductPage() {
   const [product, setProduct] = useState(null);  // внутри компонента
 
   useEffect(() => {
+    console.log('API_URL:', process.env.REACT_APP_API_URL)
     fetch(`${process.env.REACT_APP_API_URL}/api/products/${id}`)
       .then(res => res.json())
       .then(data => setProduct(data))

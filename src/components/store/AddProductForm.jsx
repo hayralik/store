@@ -8,7 +8,7 @@ export default function AddProductForm({ onProductAdded }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-  const response = await fetch(`https://store-be-fhbs.onrender.com/api/products`, {
+  const response = await fetch(`${process.env.REACT_APP_API_URL}/api/products`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, price: parseInt(price), description })
