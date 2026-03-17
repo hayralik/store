@@ -15,7 +15,8 @@ export default function ProductList() {
   const [products, setProducts] = useState([]);
 
   const loadProducts = () => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/products`)
+    fetch('https://store-be-fhbs.onrender.com/api/products')
+//    fetch(`${process.env.REACT_APP_API_URL}/api/products`)
 //    fetch(`http://localhost:5000/api/products`)
       .then(res => res.json())
       .then(data => setProducts(data))
