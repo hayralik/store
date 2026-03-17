@@ -16,6 +16,7 @@ export default function ProductList() {
 
   const loadProducts = () => {
     fetch(`${process.env.REACT_APP_API_URL}/api/products`)
+//    fetch(`http://localhost:5000/api/products`)
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error('Ошибка:', err));
