@@ -7,6 +7,7 @@ const renderCartItem = (item) => (
   </div>
 );
 
+
 export default function CartPage() {
   const { cart } = useContext(CartContext);
 
