@@ -3,7 +3,8 @@ import { CartContext } from '../../context/cartcontext';
 
 const renderCartItem = (item) => (
   <div key={item.id}>
-    {item.name}: {item.price} ₽
+    {/*}    {item.name}: {item.price} ₽ */}
+    {item.name}: {item.price} ₽ x {item.quantity || 1}
   </div>
 );
 

@@ -27,10 +27,10 @@ export default function ProductList() {
 
   return (
     <div>
-      <AddProductForm onProductAdded={loadProducts} />
       <div className="product-list">
         {products.map(renderProduct)}
       </div>
+      <AddProductForm onProductAdded={loadProducts} />
     </div>
   );
 
