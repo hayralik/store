@@ -1,6 +1,7 @@
 import Navigation from '../navigation/navigation';
 import './layout.css';
 import RegisterForm from '../store/RegisterForm';
+import LoginForm from '../store/LoginForm';
 
 export default function Layout({ children }) {
   return (
