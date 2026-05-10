@@ -10,6 +10,11 @@ export default function Layout({ children }) {
       </header>
 
       <Navigation />
+      
+      <LoginForm onLoginSuccess={() => {
+        // Например, скрыть форму входа или обновить состояние
+        console.log('Вход выполнен');
+      }} />
 
       <div className="main-container">
         <aside className="sidebar-left">

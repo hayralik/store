@@ -10,7 +10,10 @@ export default function AddProductForm({ onProductAdded }) {
     
   const response = await fetch(`${process.env.REACT_APP_API_URL}/api/products`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
       body: JSON.stringify({ name, price: parseInt(price), description })
     });
 
