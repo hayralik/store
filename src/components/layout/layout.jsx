@@ -10,7 +10,6 @@ export default function Layout({ children }) {
       </header>
 
       <Navigation />
-      Test
       <LoginForm onLoginSuccess={() => {
         // Например, скрыть форму входа или обновить состояние
         console.log('Вход выполнен');
